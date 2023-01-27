@@ -1,0 +1,21 @@
+namespace: babybuddy
+name: babybuddy
+label: babybuddy
+
+containerName: babybuddy
+serviceName: babybuddy
+ingressName: babybuddy
+
+replicas: 1
+
+port:
+  name: http
+  targetPort: 8000
+  port: 80
+
+certificate:
+  name: babybuddy-example-com
+  dns: babybuddy.example.com
+  issuer: letsencrypt-production
+
+image: lscr.io/linuxserver/babybuddy:latest

@@ -1,0 +1,22 @@
+namespace: grocy
+name: grocy
+label: grocy
+
+containerName: grocy
+serviceName: grocy
+ingressName: grocy
+
+replicas: 1
+
+port:
+  name: http
+  protocol: TCP
+  targetPort: 80
+  port: 80
+
+certificate:
+  name: grocy-example-com
+  dns: grocy.example.com
+  issuer: letsencrypt-production
+
+image: linuxserver/grocy:latest

@@ -1,0 +1,21 @@
+namespace: mealie
+name: mealie
+label: mealie
+
+containerName: mealie
+serviceName: mealie
+ingressName: mealie
+
+replicas: 3
+
+port:
+  name: http
+  targetPort: 80
+  port: 80
+
+certificate:
+  name: mealie-example-com
+  dns: mealie.example.com
+  issuer: letsencrypt-production
+
+image: hkotel/mealie:latest

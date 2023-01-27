@@ -1,0 +1,21 @@
+namespace: uptimekuma
+name: uptimekuma
+label: uptimekuma
+
+containerName: uptimekuma
+serviceName: uptimekuma
+ingressName: uptimekuma
+
+replicas: 1
+
+port:
+  name: TCP
+  targetPort: 3001
+  port: 3001
+
+certificate:
+  name: kuma-example-com
+  dns: kuma.example.com
+  issuer: letsencrypt-production
+
+image: louislam/uptime-kuma:latest
